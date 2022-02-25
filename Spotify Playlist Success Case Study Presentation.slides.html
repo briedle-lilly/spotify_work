@@ -14402,7 +14402,7 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Predicting-Playlist-Success">Predicting Playlist Success<a class="anchor-link" href="#Predicting-Playlist-Success">&#182;</a></h1><ul>
-<li><p>We now seek to predict playlist success as measured by (1) number of users with stream greater than 30 seconds today.</p>
+<li><p>We now seek to predict playlist success as measured by the number of users with stream greater than 30 seconds today.</p>
 </li>
 <li><p>Separate models are fit for the user-created and Spotify-created playlists.</p>
 </li>
@@ -14425,7 +14425,7 @@ div.jp-OutputPrompt {
 <li><p>We use SHAP values to draw inference from the models.</p>
 <ol>
 <li>Create plots of the most important predictors ranked by mean absolute SHAP values.  </li>
-<li>For genre and mood, create plots that highligh which levels of the variable are related to higher and lower success</li>
+<li>For genre and mood, create plots that highlight which levels of the variable are related to higher and lower success.</li>
 </ol>
 </li>
 <li><p>Deriving measures of inferential uncertainty from gradient boosting models can be challenging.  Thus, we also fit a robust M-estimation linear regression with a Huber loss function (results in Appendix).</p>
@@ -14497,7 +14497,14 @@ Note that due to a relatively limited sample size for Spotify playlists, all res
 
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="User-Created-Playlists:-Modeling-Results-for-Number-of-Users-Today">User-Created Playlists: Modeling Results for Number of Users Today<a class="anchor-link" href="#User-Created-Playlists:-Modeling-Results-for-Number-of-Users-Today">&#182;</a></h2><p>For the user-created playlists, we see that increasing the number of tracks is also associated with increased number of users today.  Genre appears relatively more important than in the Spotify playlists.  The most successful genres for the user-created playlists are "Children's", "Latin" and "Traditional".  In a robust linear regression model, each of these genres are found to be significantly more successful than genre = "-".</p>
+<h2 id="User-Created-Playlists:-Modeling-Results-for-Number-of-Users-Today">User-Created Playlists: Modeling Results for Number of Users Today<a class="anchor-link" href="#User-Created-Playlists:-Modeling-Results-for-Number-of-Users-Today">&#182;</a></h2><ul>
+<li><p>Increasing number of tracks is also associated with increased number of users today.</p>
+</li>
+<li><p>Genre appears relatively more important than in the Spotify playlists, with the most successful genres being "Children's", "Latin" and "Traditional".</p>
+</li>
+<li><p>In a robust linear regression model, each of these genres are found to be significantly more successful than genre = "-".</p>
+</li>
+</ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
